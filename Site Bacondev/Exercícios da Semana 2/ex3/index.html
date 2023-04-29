@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinãmica</h1>
+    <p>Tente abrir esse site em vários sites diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="Imagens/P.png" tyoe = "image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/M.png" tyoe = "image/png">
+        <img src="Imagens/G.png" alt="Imagem Flexível">
+    </picture>
+
+    <h1>Reprodução de Áudio</h1>
+
+    <p>O método a seguir não é indicado, pois não funciona em todos navegadores, nem com todo tipo de áudio.</p>
+
+    <audio src="midia/Things Are Going Southampton - Verified Picasso.mp3" controls autoplay></audio> <!--MP3 WAV OGG-->
+
+    <p>Método indicado</p>
+
+    <audio preload="metadata" autoplay controls loop> <!--auto só carrega o site inteiro dps que carregar o audio, metadata carrega somente informações do arquivo e faz o download somente quando o usuário clica e none não carrega nada-->
+        <source src="midia/Things Are Going Southampton - Verified Picasso.mp3" type="audio/mpeg">
+        <source src="midia/Things Are Going Southampton - Verified Picasso.ogg" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/Things Are Going Southampton - Verified Picasso.mp3">Clique aqui para baixar o arquivo para baixar o audio em MP3</a></p>
+    </audio>
+</body>
+</html>
